@@ -5,16 +5,57 @@
     font-family: 'Baloo 2', cursive;
 }
 
-.background {
+/* .background {
     width: 100vw;
     background-color: #8a2be2;
     height: 100vh; 
     overflow: hidden;
+} */
+
+/* Главная страница */
+.mainPage {
+    display: flex;
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh; 
+    align-self: center;
+    justify-content: center;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height:300px;
+    align-self: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#button1 {
+    background: none;
+    border: none;
+    color: #6200ff;
+    font-size: 40px;
+}
+
+#button2 {
+    background: none;
+    border: none;
+    color: #ee00ff;
+    font-size: 40px;
+}
+
+#button3 {
+    background: none;
+    border: none;
+    color: #64e098;
+    font-size: 40px;
+}
 
 #characterScreen {
     display: flex;
+    display: none;
     height: 100%;
     flex-direction: column;
     align-items: center;
@@ -89,7 +130,7 @@
     display: block;
 }
 
-.background {
+/* .background {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -122,7 +163,7 @@
     animation: starTwinkle 3s ease-in-out infinite;
     z-index: 1;
     opacity: 0.8;
-}
+} */
 
 /* Анимации */
 

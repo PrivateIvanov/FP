@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фурри Метео</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background">
+    <!-- Экран выбора персонажа -->
+    <div id="characterScreen">
+        <div class="title">
+            <h1>Furry Meteo</h1>
+        </div>    
+        <div class="title2">
+            <h2>Выбери своего персонажа:</h2>
+        </div>    
+        <div class="charactersContainer">
+            <div class="characterImg" data-character="wolf" onclick="goToWolfPage()">
+                <img src="img/Character1.jpg" alt="Волк">
+            </div>
+            <div class="characterImg" data-character="fox">
+                <img src="img/Character2.jpg" alt="Лис">
+            </div>
+            <div class="characterImg" data-character="cat">
+                <img src="img/Character3.jpg" alt="Кот">
+            </div>
+        </div>
+    </div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

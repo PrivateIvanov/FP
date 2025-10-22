@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', cursive;
+}
+
+.background {
+    width: 100vw;
+    background-color: #8a2be2;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+
+#characterScreen {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Заголовки */
+.title {
+    align-self: flex-start;
+}
+
+.title h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    background: linear-gradient(to right, #6200ff, #cc00ff, #ee00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    animation: rainbow 7s ease infinite;
+    padding: 0 25px;
+}
+
+.title2 h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px rgba(187, 134, 252, 0.7),
+        0 0 20px rgba(159, 88, 252, 0.5),
+        0 0 30px rgba(131, 42, 252, 0.3);
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Персонажи */
+.charactersContainer {
+    margin: 50px 200px 0px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.characterImg {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    /* box-shadow: 0 0 15px #b143ff; */
+    /* border: 5px solid rgba(159, 88, 252, 0.5); */
+}
+
+.characterImg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff43e3;
+}
+
+.characterImg img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: 
+        radial-gradient(ellipse at 30% 40%, #1a1f2b 0%, #0c0e15 40%, #000000 100%),
+        radial-gradient(ellipse at 70% 60%, #2d1a4c 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, #1a2c4c 0%, transparent 50%);
+    position: relative;
+}
+
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, #ffffff 20%, transparent 100%),
+        radial-gradient(1px 1px at 40% 70%, #e0e0e0 30%, transparent 100%),
+        radial-gradient(3px 3px at 60% 20%, #ffffff 25%, transparent 100%),
+        radial-gradient(1px 1px at 80% 50%, #c0c0c0 40%, transparent 100%),
+        radial-gradient(2px 2px at 30% 80%, #ffffff 35%, transparent 100%),
+        radial-gradient(1px 1px at 70% 40%, #e8e8e8 45%, transparent 100%),
+        radial-gradient(2px 2px at 90% 70%, #ffffff 30%, transparent 100%),
+        radial-gradient(1px 1px at 10% 90%, #d0d0d0 50%, transparent 100%);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: starTwinkle 3s ease-in-out infinite;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* Анимации */
+
+@keyframes starTwinkle {
+    0%, 100% { 
+        opacity: 0.4;
+        filter: brightness(0.8);
+    }
+    50% { 
+        opacity: 1;
+        filter: brightness(1.2);
+    }
+}
+
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+

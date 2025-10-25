@@ -36,10 +36,18 @@ const elements = {
 };
 
 
-// Инициализация
-document.addEventListener('DOMContentLoaded', () => {
-  setupEventListeners();
-});
+// // Инициализация
+// document.addEventListener('DOMContentLoaded', () => {
+//   setupEventListeners();
+// });
+
+// Текущий персонаж
+const currentCharacter = {
+  type: 'wolf',
+  name: 'Волк',
+  img: 'img/Character1.jpg'
+};
+
 
 
 
@@ -113,7 +121,7 @@ async function generateCharacterResponse(weather) {
           wind: weather.wind,
           humidity: weather.humidity
         },
-        character: 'wolf'
+        character: currentCharacter.type
       })
     });
 

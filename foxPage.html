@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фурри Метео</title>
+    <link rel="stylesheet" type="text/css" href="styles-fox.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background">
+
+    <!-- Экран прогноза погоды -->
+    <div id="foxPage">
+        <div class="characterDisplay">
+            <img id="selectedCharacterImg" src="img/Character2.jpg" alt="Персонаж">            
+        </div>
+        <div class="speechBubble" id="weatherPhrase">Привет! Назови город и я расскажу о погоде!</div>
+        <div class="forecast">
+        <div class="weatherInput">
+            <input type="text" id="cityInput" placeholder="Введите город">
+            <button id="getWeatherBtn">Узнать погоду</button>
+        </div>
+        
+        <div class="weatherInfo">
+            <div id="cityName">-</div>
+            <div id="temperature">-°C</div>
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <div id="weatherDescription">-</div>
+            <div class="details">
+                <span id="wind">Ветер: - км/ч</span>
+                <span id="humidity">Влажность: -%</span>
+            </div>
+            <button id="backButton">← Выбрать другого персонажа</button>
+        </div>
+        </div>
+        
+
+    </div>
+</div>
+
+<script src="/js/fox.js"></script>
+</body>
+</html>

@@ -7,9 +7,17 @@ button3: document.getElementById('button3'),
 };
 
 
-// Выбор страницы Волка
+// Выбор страниц
 function goToWolfPage() {
 window.location.href = 'wolfPage.html';
+}
+
+function goToFoxPage() {
+window.location.href = 'foxPage.html';
+}
+
+function goToPandaPage() {
+window.location.href = 'pandaPage.html';
 }
 
 // Кнопки меню

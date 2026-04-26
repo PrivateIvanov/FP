@@ -91,9 +91,10 @@ async function fetchWeather(city) {
   const response = await fetch(
     `${API_CONFIG.WEATHER.URL}?key=${API_CONFIG.WEATHER.API_KEY}&q=${city}&lang=ru`
   );
-  
+    console.log(response);
   if (!response.ok) throw new Error("Город не найден");
   const data = await response.json();
+  console.log(data);
   
   return {
     city: data.location.name,

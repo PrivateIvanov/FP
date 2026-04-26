@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фурри Метео</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="/dist/output.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,7 +23,7 @@
             <div class="titleChooseCharacter">
                 <h2>Выбери своего персонажа:</h2>
             </div>    
-            <div class="charactersContainer">
+            <div class="charactersContainerWeather">
                 <div class="characterImg" data-character="wolf" onclick="goToWolfPage()">
                     <img src="img/Character1.jpg" alt="Волк">
                 </div>
@@ -30,6 +32,23 @@
                 </div>
                 <div class="characterImg" data-character="panda" onclick="goToPandaPage()">
                     <img src="img/Character3.jpg" alt="Панда">
+                </div>
+        </div>   
+    </div>    
+
+    <div class="characterChooseOracle">
+            <div class="titleChooseOracle">
+                <h2>Выбери своего персонажа:</h2>
+            </div>    
+            <div class="charactersContainerOracle">
+                <div class="characterImg" data-character="dragon" onclick="goToDragonPage()">
+                    <img src="img/CharacterDragon.jpg" alt="Дракон">
+                </div>
+                <div class="characterImg" data-character="fox" onclick="goToFoxPage()"> 
+                    <img src="img/CharacterRabbit.jpg" alt="Лис">
+                </div>
+                <div class="characterImg" data-character="panda" onclick="goToPandaPage()">
+                    <img src="img/CharacterTiger.jpg" alt="Панда">
                 </div>
         </div>   
     </div>    

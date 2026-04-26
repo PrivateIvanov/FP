@@ -1,5 +1,6 @@
 const menu = document.querySelector('.menu');
 const characterChooseWeather = document.querySelector('.characterChooseWeather');
+const characterChooseOracle = document.querySelector('.characterChooseOracle');
 const button = {
 button1: document.getElementById('button1'),
 button2: document.getElementById('button2'),
@@ -19,6 +20,9 @@ window.location.href = 'foxPage.html';
 function goToPandaPage() {
 window.location.href = 'pandaPage.html';
 }
+function goToDragonPage() {
+window.location.href = 'dragonPage.html'; 
+}
 
 // Кнопки меню
 
@@ -33,4 +37,17 @@ button.button3.style.paddingRight = '165px';
         characterChooseWeather.style.opacity = '1';
         characterChooseWeather.style.pointerEvents = 'auto';
         characterChooseWeather.style.transition = 'opacity 1.5s ease-in-out'; 
+    }, 2000 )});
+
+button2.addEventListener('click', function() { 
+menu.classList.add('moved-left');
+button.button1.style.paddingRight = '165px';
+button.button2.style.paddingRight = '42px';
+button.button3.style.paddingRight = '165px';
+
+
+    setTimeout(() => {
+        characterChooseOracle.style.opacity = '1';
+        characterChooseOracle.style.pointerEvents = 'auto';
+        characterChooseOracle.style.transition = 'opacity 1.5s ease-in-out'; 
     }, 2000 )});

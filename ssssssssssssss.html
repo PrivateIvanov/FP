@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фурри Метео — Дракон (Tailwind)</title>
+  <!-- Tailwind CSS (сгенерированный тобой) -->
+  <link href="/dist/output.css" rel="stylesheet">
+  <!-- Кастомные стили только для сложного фона (звёзды и градиенты) -->
+  <style>
+    /* Копируем фон из оригинального styles-dragon.css */
+    .background {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: 
+        radial-gradient(ellipse at 30% 40%, #1a1f2b 0%, #0c0e15 40%, #000000 100%),
+        radial-gradient(ellipse at 70% 60%, #2d1a4c 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, #1a2c4c 0%, transparent 50%);
+      position: relative;
+    }
+    .background::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(2px 2px at 20% 30%, #ffffff 20%, transparent 100%),
+        radial-gradient(1px 1px at 40% 70%, #e0e0e0 30%, transparent 100%),
+        radial-gradient(3px 3px at 60% 20%, #ffffff 25%, transparent 100%),
+        radial-gradient(1px 1px at 80% 50%, #c0c0c0 40%, transparent 100%),
+        radial-gradient(2px 2px at 30% 80%, #ffffff 35%, transparent 100%),
+        radial-gradient(1px 1px at 70% 40%, #e8e8e8 45%, transparent 100%),
+        radial-gradient(2px 2px at 90% 70%, #ffffff 30%, transparent 100%),
+        radial-gradient(1px 1px at 10% 90%, #d0d0d0 50%, transparent 100%);
+      background-repeat: repeat;
+      background-size: 300px 300px;
+      animation: starTwinkle 3s ease-in-out infinite;
+      z-index: 1;
+      opacity: 0.8;
+    }
+    @keyframes starTwinkle {
+      0%, 100% { opacity: 0.4; filter: brightness(0.8); }
+      50% { opacity: 1; filter: brightness(1.2); }
+    }
+    /* Обеспечиваем, чтобы контент был поверх фона */
+    #dragonPage {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+<div class="background">
+  <!-- Основной контейнер страницы (Tailwind-утилиты) -->
+  <div id="dragonPage" class="flex flex-row items-center h-full p-5">
+    
+    <!-- Блок с изображением персонажа -->
+    <div class="ml-20">
+      <img id="selectedCharacterImg" 
+           src="img/CharacterDragon.jpg" 
+           alt="Дракон"
+           class="w-80 h-auto rounded-2xl shadow-[0_0_25px_#ff43e3]">
+    </div>
+
+    <!-- Облачко речи -->
+    <div class="ml-12 bg-white rounded-2xl shadow-md text-center font-bold max-w-xs p-8" 
+         id="weatherPhrase">
+      Привет! Скажи, что хочешь знать, и я дам тебе предсказание
+    </div>
+
+    <!-- Блок кнопки -->
+    <div class="flex flex-col ml-12">
+      <button id="buttonOracle1" 
+              class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition duration-200">
+        Получить предсказание
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Подключаем твой скрипт (при необходимости доработай его) -->
+<script src="js/dragon.js"></script>
+</body>
+</html>

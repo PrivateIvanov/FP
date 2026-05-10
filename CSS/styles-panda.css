@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', cursive;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: 
+        radial-gradient(ellipse at 30% 40%, #1a1f2b 0%, #0c0e15 40%, #000000 100%),
+        radial-gradient(ellipse at 70% 60%, #2d1a4c 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, #1a2c4c 0%, transparent 50%);
+    position: relative;
+}
+
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, #ffffff 20%, transparent 100%),
+        radial-gradient(1px 1px at 40% 70%, #e0e0e0 30%, transparent 100%),
+        radial-gradient(3px 3px at 60% 20%, #ffffff 25%, transparent 100%),
+        radial-gradient(1px 1px at 80% 50%, #c0c0c0 40%, transparent 100%),
+        radial-gradient(2px 2px at 30% 80%, #ffffff 35%, transparent 100%),
+        radial-gradient(1px 1px at 70% 40%, #e8e8e8 45%, transparent 100%),
+        radial-gradient(2px 2px at 90% 70%, #ffffff 30%, transparent 100%),
+        radial-gradient(1px 1px at 10% 90%, #d0d0d0 50%, transparent 100%);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: starTwinkle 3s ease-in-out infinite;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+#pandaPage {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.characterDisplay {
+    margin-left: 150px;
+}
+
+#selectedCharacterImg {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #ff43e3;
+}
+
+.speechBubble {
+    margin-left: 75px;
+    width: 300px;
+    max-width: 300px;
+    background: white;
+    padding: 30px 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    font-weight: bold;
+    
+}
+
+.weatherInput {
+    display: flex;
+    gap: 10px;
+    margin-left: 75px;
+}
+
+.weatherInput input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #FF9F43;
+    width: 250px;
+}
+
+.weatherInput button {
+    padding: 10px 20px;
+    background: #5F27CD;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 130.73px;
+}
+
+.weatherInfo {
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF9F43;
+    margin: 10px 0;
+}
+
+#weatherIcon {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    filter: drop-shadow(0 0 5px gold);
+}
+
+.details {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#backButton {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: 
+        radial-gradient(ellipse at 30% 40%, #1a1f2b 0%, #0c0e15 40%, #000000 100%),
+        radial-gradient(ellipse at 70% 60%, #2d1a4c 0%, transparent 50%),
+        radial-gradient(ellipse at 40% 80%, #1a2c4c 0%, transparent 50%);
+    position: relative;
+}
+
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, #ffffff 20%, transparent 100%),
+        radial-gradient(1px 1px at 40% 70%, #e0e0e0 30%, transparent 100%),
+        radial-gradient(3px 3px at 60% 20%, #ffffff 25%, transparent 100%),
+        radial-gradient(1px 1px at 80% 50%, #c0c0c0 40%, transparent 100%),
+        radial-gradient(2px 2px at 30% 80%, #ffffff 35%, transparent 100%),
+        radial-gradient(1px 1px at 70% 40%, #e8e8e8 45%, transparent 100%),
+        radial-gradient(2px 2px at 90% 70%, #ffffff 30%, transparent 100%),
+        radial-gradient(1px 1px at 10% 90%, #d0d0d0 50%, transparent 100%);
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: starTwinkle 3s ease-in-out infinite;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+@keyframes starTwinkle {
+    0%, 100% { 
+        opacity: 0.4;
+        filter: brightness(0.8);
+    }
+    50% { 
+        opacity: 1;
+        filter: brightness(1.2);
+    }
+}

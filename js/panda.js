@@ -79,7 +79,7 @@ async function getWeather() {
     elements.character.name.textContent = gptResponse;
 
   } catch (error) {
-    elements.character.name.textContent = `Лиса не смогла узнать погоду: ${error.message}`;
+    elements.character.name.textContent = `Клауд не смог узнать погоду: ${error.message}`;
     console.error('Ошибка:', error);
   } finally {
     showLoading(false);

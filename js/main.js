@@ -93,3 +93,36 @@ pandaCard.addEventListener('mouseenter', () => {
 pandaCard.addEventListener('mouseleave', () => {
   lightblueRay.style.opacity = '0';
 });
+
+const dragonCard = document.querySelector('.characterImg[data-character="dragon"]');
+const greenRay = document.getElementById('green-ray');
+
+dragonCard.addEventListener('mouseenter', () => {
+  greenRay.style.backgroundImage = 'url("img/greenRay.png")';
+  greenRay.style.opacity = '1';
+});
+dragonCard.addEventListener('mouseleave', () => {
+  greenRay.style.opacity = '0';
+});
+
+const rabbitCard = document.querySelector('.characterImg[data-character="rabbit"]');
+const pinkRay = document.getElementById('pink-ray');
+
+rabbitCard.addEventListener('mouseenter', () => {
+  pinkRay.style.backgroundImage = 'url("img/pinkRay.png")';
+  pinkRay.style.opacity = '1';
+});
+rabbitCard.addEventListener('mouseleave', () => {
+  pinkRay.style.opacity = '0';
+});
+
+const tigerCard = document.querySelector('.characterImg[data-character="tiger"]');
+const orange2Ray = document.getElementById('orange2-ray');
+
+tigerCard.addEventListener('mouseenter', () => {
+  orange2Ray.style.backgroundImage = 'url("img/orange2Ray.png")';
+  orange2Ray.style.opacity = '1';
+});
+tigerCard.addEventListener('mouseleave', () => {
+  orange2Ray.style.opacity = '0';
+});

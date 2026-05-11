@@ -1,6 +1,6 @@
 /* styles.css */
 @font-face {
-font-family: 'Resquare';
+font-family: 'resquare';
 src: url('fonts/ReSquare-Regular.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
@@ -235,7 +235,7 @@ radial-gradient(ellipse at 40% 80%, #1a2c4c 0%, transparent 50%);
 /* Карточка волка */
 .characterImg:hover[data-character="wolf"] {
     transform: scale(1.05);
-    box-shadow: 0 0 25px #7395fa;
+    box-shadow: 0 0 25px #8eabff;
 }
 
 /* Карточка лиса */
@@ -269,19 +269,19 @@ radial-gradient(ellipse at 40% 80%, #1a2c4c 0%, transparent 50%);
 
 .characterImg:hover[data-character="dragon"] {
     transform: scale(1.05);
-    box-shadow: 0 0 25px #7395fa;
+    box-shadow: 0 0 25px #4ca354;
 }
 
-/* Карточка лиса */
+
 .characterImg:hover[data-character="rabbit"] {
     transform: scale(1.05);
-    box-shadow: 0 0 25px #ec7c12;
+    box-shadow: 0 0 25px #f3baff;
 }
 
-/* Карточка панды */
+
 .characterImg:hover[data-character="tiger"] {
     transform: scale(1.05);
-    box-shadow: 0 0 25px #21ebf1;
+    box-shadow: 0 0 25px #e77e00;
 }
 
 .ray {

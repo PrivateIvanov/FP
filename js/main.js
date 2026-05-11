@@ -28,26 +28,68 @@ window.location.href = 'dragonPage.html';
 
 button1.addEventListener('click', function() { 
 menu.classList.add('moved-left');
-button.button1.style.paddingRight = '165px';
+button.button1.style.paddingRight = '186px';
 button.button2.style.paddingRight = '42px';
-button.button3.style.paddingRight = '165px';
+button.button3.style.paddingRight = '209px';
+button.button1.classList.add('activeButton1');
+button.button2.classList.remove('activeButton2');
 
 
     setTimeout(() => {
         characterChooseWeather.style.opacity = '1';
         characterChooseWeather.style.pointerEvents = 'auto';
-        characterChooseWeather.style.transition = 'opacity 1.5s ease-in-out'; 
-    }, 2000 )});
+        characterChooseWeather.style.transition = 'opacity 1s ease-in-out'; 
+        characterChooseOracle.style.opacity = '0';
+        characterChooseOracle.style.pointerEvents = 'none';
+        characterChooseOracle.style.transition = 'opacity 1s ease-in-out'; 
+    }, 700 )});
 
 button2.addEventListener('click', function() { 
 menu.classList.add('moved-left');
-button.button1.style.paddingRight = '165px';
+button.button1.style.paddingRight = '186px';
 button.button2.style.paddingRight = '42px';
-button.button3.style.paddingRight = '165px';
+button.button3.style.paddingRight = '209px';
+button.button2.classList.add('activeButton2');
+button.button1.classList.remove('activeButton1');
 
 
     setTimeout(() => {
         characterChooseOracle.style.opacity = '1';
         characterChooseOracle.style.pointerEvents = 'auto';
-        characterChooseOracle.style.transition = 'opacity 1.5s ease-in-out'; 
-    }, 2000 )});
+        characterChooseOracle.style.transition = 'opacity 1s ease-in-out'; 
+    }, 700 )});
+
+
+    // Rays
+    const wolfCard = document.querySelector('.characterImg[data-character="wolf"]');
+    const blueRay = document.getElementById('blue-ray');
+
+wolfCard.addEventListener('mouseenter', () => {
+  blueRay.style.backgroundImage = 'url("img/patternBlue7395fa.png")';
+  blueRay.style.opacity = '1';
+});
+wolfCard.addEventListener('mouseleave', () => {
+  blueRay.style.opacity = '0';
+});
+
+const foxCard = document.querySelector('.characterImg[data-character="fox"]');
+const orangeRay = document.getElementById('orange-ray');
+
+foxCard.addEventListener('mouseenter', () => {
+  orangeRay.style.backgroundImage = 'url("img/patternOrangeec7c12.png")';
+  orangeRay.style.opacity = '1';
+});
+foxCard.addEventListener('mouseleave', () => {
+  orangeRay.style.opacity = '0';
+});
+
+const pandaCard = document.querySelector('.characterImg[data-character="panda"]');
+const lightblueRay = document.getElementById('lightblue-ray');
+
+pandaCard.addEventListener('mouseenter', () => {
+  lightblueRay.style.backgroundImage = 'url("img/patternLightBlue21ebf1.png")';
+  lightblueRay.style.opacity = '1';
+});
+pandaCard.addEventListener('mouseleave', () => {
+  lightblueRay.style.opacity = '0';
+});

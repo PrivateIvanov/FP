@@ -1,3 +1,19 @@
+/* styles.css */
+@font-face {
+font-family: 'Resquare';
+src: url('fonts/ReSquare-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'resquare';
+    src: url('fonts/ReSquare-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,15 +21,26 @@
     font-family: 'Baloo 2', cursive;
 }
 
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+background: radial-gradient(ellipse at 90% 10%, #1a1f2b 0%, #0c0e15 40%, #000000 100%), 
+radial-gradient(ellipse at 70% 60%, #2d1a4c 0%, transparent 50%), 
+radial-gradient(ellipse at 40% 80%, #1a2c4c 0%, transparent 50%);
+    position: relative;
+
+}
 
 /* Главная страница */
 .mainPage {
     display: flex;
-    background-color: #000000;
+    /* background-color: #000000; */
     width: 100vw;
     height: 100vh; 
     align-self: center;
     justify-content: center;
+    padding: 0 15px;
 }
 
 /* Главный контейнер  */
@@ -25,6 +52,7 @@
     height: 100vh; 
     align-self: center;
     justify-content: center;
+    z-index: 2;
 }
 
 /* Меню */
@@ -40,7 +68,7 @@
     position:absolute;
     left: 50%; /* Начальная позиция по центру */
     transform: translateX(-50%); /* Центрирование */
-    transition: all 1s ease-in-out; /* Анимация перемещения */
+    transition: all 0.9s cubic-bezier(0.19, 0.73, 0.6, 1.06); /* Анимация перемещения */
     z-index: 10;
 
 }
@@ -60,8 +88,19 @@
     border: none;
     color: #6200ff;
     font-size: 40px; 
-    transition: all 1s ease-in-out; /* Анимация перемещения */
+    transition: all 0.8s ease-in-out; 
     cursor: pointer;
+    font-family: 'Resquare';
+    font-weight: bold;
+
+}
+
+.activeButton1 {
+        text-shadow: 
+        0 0 1px #fff,
+        0 0 12px #6200ff,
+        0 0 20px #6200ff,
+        0 0 40px rgba(98, 0, 255, 0.6);
 }
 
 #button2 {
@@ -71,10 +110,20 @@
     border: none;
     color: #ee00ff;
     font-size: 40px;
-    transition: all 1s ease-in-out; /* Анимация перемещения */
+    transition: all 0.8s ease-in-out; 
     cursor: pointer;
+    font-family: 'resquare';
+    font-weight: bold;
+
 }
 
+.activeButton2 {
+        text-shadow: 
+        0 0 2px #fff,
+        0 0 6px #ee00ff,
+        0 0 12px #ee00ff,
+        0 0 25px rgba(238, 0, 255, 0.6);
+}
 
 #button3 {
     background: none;
@@ -83,8 +132,18 @@
     border: none;
     color: #64e098;
     font-size: 40px;
-    transition: all 1s ease-in-out; /* Анимация перемещения */
+    transition: all 0.8s ease-in-out; 
     cursor: pointer;
+    font-family: 'resquare';
+    font-weight: bold;    
+}
+
+.activeButton3 {
+        text-shadow: 
+        0 0 2px #fff,
+        0 0 6px #64e098,
+        0 0 12px #64e098,
+        0 0 25px rgba(100, 224, 152, 0.6);
 }
 
 /* КОнтейнер для персов погоды*/
@@ -93,7 +152,9 @@
     position: absolute;
     opacity: 0;
     pointer-events: none;
-    margin-left: 250px;
+    margin-left: 100px;
+    margin-bottom: 125px;
+    align-self: center;
 }
 
 .title {
@@ -115,6 +176,8 @@
     border-radius: 15px;
     margin: 20px 0;
     text-align: center;
+    font-family: 'resquare';
+    font-weight: bold;
 }
 
 /* Контейнер для персов ПРедсказаний */
@@ -123,7 +186,9 @@
     position: absolute;
     opacity: 0;
     pointer-events: none;
-    margin-left: 250px;
+    margin-left: 100px;
+    margin-bottom: 125px;
+    align-self: center;
 }
 
 .titleChooseOracle h2 {
@@ -141,6 +206,8 @@
     border-radius: 15px;
     margin: 20px 0;
     text-align: center;
+    font-family: 'resquare';
+    font-weight: bold;
 }
 
 /* Персонажи Погоды */
@@ -163,9 +230,24 @@
     /* border: 5px solid rgba(159, 88, 252, 0.5); */
 }
 
-.characterImg:hover {
+
+
+/* Карточка волка */
+.characterImg:hover[data-character="wolf"] {
     transform: scale(1.05);
-    box-shadow: 0 0 25px #ff43e3;
+    box-shadow: 0 0 25px #7395fa;
+}
+
+/* Карточка лиса */
+.characterImg:hover[data-character="fox"] {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ec7c12;
+}
+
+/* Карточка панды */
+.characterImg:hover[data-character="panda"] {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #21ebf1;
 }
 
 .characterImg img {
@@ -185,24 +267,106 @@
     gap: 50px;
 }
 
-
-@keyframes starTwinkle {
-    0%, 100% { 
-        opacity: 0.4;
-        filter: brightness(0.8);
-    }
-    50% { 
-        opacity: 1;
-        filter: brightness(1.2);
-    }
+.characterImg:hover[data-character="dragon"] {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #7395fa;
 }
 
-
-@keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Карточка лиса */
+.characterImg:hover[data-character="rabbit"] {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ec7c12;
 }
 
+/* Карточка панды */
+.characterImg:hover[data-character="tiger"] {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #21ebf1;
+}
 
+.ray {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  pointer-events: none;   /* чтобы не мешал кликам */
+  z-index: 0;             /* под всеми элементами */
+}
 
+@media (max-width: 768px) {
+  /* Главный контейнер – убираем лишнюю высоту, позволяем скролл */
+  .mainPage, .mainContainer {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  /* Меню – делаем не абсолютным, а в потоке, центрируем по вертикали */
+  .menu {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    gap: 20px;
+    margin: 20px auto;
+    top: 0;
+  }
+  .menu.moved-left {
+    left: auto;
+    transform: none;
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  /* Кнопки меню – меньше шрифт, ширина 100% */
+  #button1, #button2, #button3 {
+    font-size: 28px;
+    padding: 12px 0;
+  }
+
+  /* Контейнер выбора персонажа – убираем margin-left, делаем на всю ширину */
+  .characterChooseWeather,
+  .characterChooseOracle {
+    position: relative;
+    margin-left: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+
+  /* Заголовок */
+  .titleChooseCharacter h2,
+  .titleChooseOracle h2 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+
+  /* Контейнер с карточками – убираем фиксированные маргины, делаем колонку */
+  .charactersContainerWeather,
+  .charactersContainerOracle {
+    margin: 20px 15px;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  /* Карточки – размеры меньше, чтобы влезали на экран */
+  .characterImg img {
+    width: 180px;
+    height: 320px;
+  }
+
+  /* Эффект при наведении – на тач-устройствах лучше убрать или оставить только для активных */
+  .characterImg:hover {
+    transform: scale(1.02);
+  }
+}
